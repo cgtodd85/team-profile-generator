@@ -1,0 +1,19 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "generates webpage with employee info",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgtodd85/team-profile-generator.git"
+  },
+  "author": "Connor Todd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cgtodd85/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/cgtodd85/team-profile-generator#readme"
+}
