@@ -20,9 +20,9 @@ nav {
 .wrapper-grid {
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
-  grid-gap: 4rem;
+  grid-gap: 2rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .container {
