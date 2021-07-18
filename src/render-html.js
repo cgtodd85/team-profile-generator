@@ -42,9 +42,9 @@ function renderEmployeeCard(x, filePath) {
           <p class="employee-type"><i class="fas fa-bullhorn"></i> Manager</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: 2</li>
-          <li class="list-group-item">Alec@baldwins.usa</li>
-          <li class="list-group-item">Office number: 2</li>
+          <li class="list-group-item">ID: ${Employee.id}</li>
+          <li class="list-group-item">email: ${Employee.email}</li>
+          <li class="list-group-item">Office number: ${Employee.office}</li>
         </ul>
       </div>
     </div>
