@@ -38,6 +38,9 @@ function init() {
       } else {
         console.log(team);
       }
+      () => {
+        //render html function
+      };
     });
   }
 
