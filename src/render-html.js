@@ -39,7 +39,7 @@ function renderEmployeeCard(x, filePath) {
       <h4 class="card-header">Alec Baldwin</h4>
       <div class="card-content">
         <div>
-          <p class="employee-type"><i class="fas fa-bullhorn"></i> Manager</p>
+          <p class="employee-type">${Employee.role}Manager</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${Employee.id}</li>
@@ -80,9 +80,10 @@ function getExtra(employee) {
 }
 
 function getIcon(employee) {
-  switch (employee.role) {
+  switch (employee) {
     case "Manager":
-      return `<h3>${employee.role} <i class="fas fa-user-secret fa-lg"></i></h3>`;
+      `<i class="fas fa-bullhorn"></i>`;
+      return;
     case "Engineer":
       return `<h3>${employee.role} <i class="fas fa-laptop-code fa-lg"></i></h3>`;
     case "Intern":
