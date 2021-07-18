@@ -33,11 +33,28 @@ function renderEmployeeCard(x, filePath) {
       <div class="wrapper-grid">`;
 
   x.forEach((Employee) => {
-    HTML += ``;
+    HTML += `
+    <div class="wrapper-grid">
+    <div class="container col">
+      <h4 class="card-header">Alec Baldwin</h4>
+      <div class="card-content">
+        <div>
+          <p class="employee-type"><i class="fas fa-bullhorn"></i> Manager</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 2</li>
+          <li class="list-group-item">Alec@baldwins.usa</li>
+          <li class="list-group-item">Office number: 2</li>
+        </ul>
+      </div>
+    </div>
+    `;
   });
-  HTML += `</div>
+  HTML += `
+    </div>
   </body>
-  </html>`;
+</html>
+  `;
 
   writeHTML(HTML, filePath);
 }
