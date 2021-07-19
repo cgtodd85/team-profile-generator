@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function renderEmployeeCard(x, filePath) {
+function renderEmployeeCard(team, filePath) {
   var HTML = `<!DOCTYPE html>
   <html lang="en">
     <head>
@@ -30,16 +30,19 @@ function renderEmployeeCard(x, filePath) {
         
       </nav>
       <!-- start the employee cards -->
-      <div class="wrapper-grid">`;
+      <div class="wrapper-grid">
+      
+      `;
 
-  x.forEach((Employee) => {
-    HTML += `
-    <div class="wrapper-grid">
+  team.forEach((employee) => {
+    if (employee.role === "Manager") {
+      HTML += `
+      <div class="wrapper-grid">
     <div class="container col">
-      <h4 class="card-header">Alec Baldwin</h4>
+      <h4 class="card-header bg-danger">${Employee.name}</h4>
       <div class="card-content">
         <div>
-          <p class="employee-type">${Employee.role}Manager</p>
+          <p class="employee-type"><i class="fas fa-bullhorn"></i> Manager</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${Employee.id}</li>
@@ -48,7 +51,48 @@ function renderEmployeeCard(x, filePath) {
         </ul>
       </div>
     </div>
-    `;
+      `;
+    }
+    if (employee.role === "Engineer") {
+      HTML += `
+      <div class="container col">
+      <h4 class="card-header bg-primary">${employee.name}</h4>
+      <div class="card-content">
+        <div>
+          <p class="employee-type">
+            <i class="fas fa-user-cog"></i> Engineer
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: ${employee.id}</li>
+          <li class="list-group-item">${employee.email}</li>
+          <li class="list-group-item">
+            Github: <a href="${employee.github}" class="card-link">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      `;
+    }
+    if (employee.role === "Intern") {
+      HTML += `
+      <div class="container col">
+      <h4 class="card-header bg-success">${employee.name}</h4>
+      <div class="card-content">
+        <div>
+          <p class="employee-type">
+            <i class="fas fa-university"></i> Student
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: ${employee.id}</li>
+          <li class="list-group-item">${employee.email}</li>
+          <li class="list-group-item">School: UNC</li>
+        </ul>
+      </div>
+    </div>
+      `;
+    }
   });
   HTML += `
     </div>
