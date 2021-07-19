@@ -14,35 +14,6 @@ const team = [];
 
 function init() {
   // function to create a Manager
-  function manager() {
-    // prompt user with questions needed to satisfy the input for a manager object
-    inquirer.prompt(managerQuestion).then((input) => {
-      let manager = new Manager(
-        input.name,
-        input.id,
-        input.email,
-        input.office
-      );
-      team.push(manager);
-      console.log(team);
-      employee();
-    });
-  }
-
-  function employee() {
-    inquirer.prompt(selectEmployee).then((answer) => {
-      if (answer.what == "Engineer") {
-        engineer();
-      } else if (answer.what == "Intern") {
-        intern();
-      } else {
-        console.log(team);
-      }
-      () => {
-        //render html function
-      };
-    });
-  }
 
   function engineer() {
     console.log("engineer sucess");
@@ -70,6 +41,32 @@ function init() {
   }
 
   manager();
+}
+
+function manager() {
+  // prompt user with questions needed to satisfy the input for a manager object
+  inquirer.prompt(managerQuestion).then((input) => {
+    let manager = new Manager(input.name, input.id, input.email, input.office);
+    team.push(manager);
+    console.log(team);
+    employee();
+  });
+}
+
+function employee() {
+  inquirer.prompt(selectEmployee).then((answer) => {
+    if (answer.what == "Engineer") {
+      engineer();
+    } else if (answer.what == "Intern") {
+      intern();
+    } else {
+      console.log(team);
+    }
+    () => {
+      rendereEmployeeCard(team, __dirname);
+      //render html function
+    };
+  });
 }
 
 init();
