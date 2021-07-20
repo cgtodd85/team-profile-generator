@@ -15,7 +15,7 @@ describe("Intern", () => {
 
   describe("getSchool", () => {
     it("returns the school property when the getSchool() method is called", () => {
-      const school = "University of Mary Washington";
+      const school = "UNC";
       const intern = new Intern("Connor", 55, "con@gmail.com", school);
       expect(intern.getSchool()).toBe(school);
     });
