@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     type: "input",
-    message: "What is the enginee's ID?",
+    message: "What is the engineer's ID?",
     name: "id",
   },
   {
