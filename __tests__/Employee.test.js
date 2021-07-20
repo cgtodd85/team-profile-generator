@@ -8,7 +8,7 @@ describe("Employee", () => {
     });
 
     it("it sets the name property based on constructor argument", () => {
-      const name = "Giselle";
+      const name = "Connor";
       const employee = new Employee(name);
       expect(employee.name).toBe(name);
     });
@@ -20,7 +20,7 @@ describe("Employee", () => {
     });
 
     it("it sets the email property based on constructor argument", () => {
-      const email = "test@email.com";
+      const email = "dude@email.com";
       const employee = new Employee("", 0, email);
       expect(employee.email).toBe(email);
     });
@@ -28,7 +28,7 @@ describe("Employee", () => {
 
   describe("getName", () => {
     it("returns the name property when the getName() method is called", () => {
-      const name = "Obi";
+      const name = "Roger";
       const employee = new Employee(name);
       expect(employee.getName()).toBe(name);
     });
