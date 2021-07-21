@@ -145,7 +145,7 @@ function renderEmployeeCard(team, filePath) {
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${employee.id}</li>
           <li class="list-group-item"><a href="mailto:someone@yoursite.com" target="_blank" rel="noopener noreferrer">${employee.email}</a></li>
-          <li class="list-group-item">School: UNC</li>
+          <li class="list-group-item">School: ${employee.school}</li>
         </ul>
       </div>
     </div>
