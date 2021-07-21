@@ -17,7 +17,6 @@ function init() {
 }
 
 function manager() {
-  // prompt user with questions needed to satisfy the input for a manager object
   inquirer.prompt(managerQuestion).then((input) => {
     let manager = new Manager(input.name, input.id, input.email, input.office);
     team.push(manager);
