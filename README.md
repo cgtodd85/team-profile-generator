@@ -2,7 +2,7 @@
 
 Using command line prompts this app generates a profile of your team of employees for a quick reference of basic information.
 
-![team profile generator walkthrough gif](https://drive.google.com/file/d/1JDBPdqpgOgop14lgaeKSVfvcfhooj_9b/view?usp=sharing)
+![team profile generator walkthrough gif](team-prof-gen-sd.gif)
 
 ## Description
 
